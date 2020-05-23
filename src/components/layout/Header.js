@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Moment from 'react-moment';
 
 export class Header extends Component {
     render() {
@@ -6,6 +7,8 @@ export class Header extends Component {
             <div>
                 <header style={headerStyle}>
                     <h1>Weather application</h1>
+                    <h5><Moment format='LLL'/></h5>
+                    <br/>
                 </header>
             </div>
         )

@@ -10,11 +10,13 @@ export class main extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://api.openweathermap.org/data/2.5/forecast?q=montreal&appid=bfc7b55aa961b52c6fe4ce1e50d0cfcf')
-        .then(res=> (this.setState({wxrList: res.data})))
+        axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=45.5017&lon=-73.5673&appid=f6bb4c1b529c94855b6e63272c09a188&units=metric')
+        .then(res=> (this.setState({wxrList: res.data.daily})))
     }
 
     render() {
+        console.log('FROM MAIN')
+        console.log(this.props.wxrList)
         return (
             <div>
                 <Header/>
